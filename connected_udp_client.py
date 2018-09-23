@@ -11,7 +11,7 @@ class Helloer(DatagramProtocol):
 
         self.transport.connect(host, port)
         print("now we can only send to host %s port %d" % (host, port))
-        self.transport.write(b"hello") # no need for address
+        self.transport.write(b"Hello World") # no need for address
 
     def datagramReceived(self, data, host):
         print("received %r from %s" % (data, host))
